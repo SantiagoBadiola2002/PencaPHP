@@ -1,4 +1,3 @@
-# PencaPHP
 -- Tabla Usuario
 CREATE TABLE Usuario (
     ci INT PRIMARY KEY,
