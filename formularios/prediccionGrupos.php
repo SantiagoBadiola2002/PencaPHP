@@ -15,7 +15,8 @@ if (!isset($_SESSION['ci'])) {
     <title>Generar Predicción</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet">
-    <style>
+    <link href="../principales/estilos.css" rel="stylesheet">
+   <style>
       body{
         background-color: #34495e;
       }
@@ -66,10 +67,9 @@ if (!isset($_SESSION['ci'])) {
     </style>
 </head>
 <body>
-<!-- <form action="../persistencia/registrarPrediccionGrupos.php" method="post"> -->
+
 <?php include '../componentes/navbarLogeado.html'; ?>
 
-<div class="container-fluid">
   <div class="form-container">
     <h1 style="text-align: center;">Fase de Grupos</h1>
     <br>

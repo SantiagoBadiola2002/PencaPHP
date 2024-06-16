@@ -1,4 +1,3 @@
-# PencaPHP
 -- Tabla Usuario
 CREATE TABLE Usuario (
     ci INT PRIMARY KEY,
@@ -15,7 +14,8 @@ CREATE TABLE Partidos (
     equipo_1 VARCHAR(30) NOT NULL,
     equipo_2 VARCHAR(30) NOT NULL,
     goles_equipo_1 INT,
-    goles_equipo_2 INT
+    goles_equipo_2 INT,
+    jugado TINYINT(1) NOT NULL DEFAULT 0
 );
 
 -- Tabla Predicciones
@@ -32,6 +32,7 @@ CREATE TABLE Prediccion_Partidos (
     partido_id INT,
     prediccion_goles_Equipo1 INT,
     prediccion_goles_Equipo2 INT,
+    puntosPartido INT,
     PRIMARY KEY (idPrediccion, partido_id),
     FOREIGN KEY (idPrediccion) REFERENCES Predicciones(idPrediccion),
     FOREIGN KEY (partido_id) REFERENCES Partidos(id)
@@ -75,3 +76,4 @@ VALUES
 ('C', 'Republica Dominicana', 'Bolivia'),
 ('D', 'Brasil', 'Ecuador'),
 ('D', 'Paraguay', 'Honduras');
+

@@ -2,34 +2,21 @@
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 0 20px;
-}
 
 .form-container {
-  padding-top: 50px;
-  width: 100%;
-  max-width: 400px;
+  max-width: 500px;
+  margin: 50px auto;
   padding: 20px;
-  border: 1px solid #c6ccc9;
-  background-color: #f7f9f9;
-  border-radius: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .right {
   float: right;
   margin: 0 0 10px 10px;
-  width: 200px; /* Ajusta este valor según el tamaño de tu imagen */
+  width: 200px;
+  /* Ajusta este valor según el tamaño de tu imagen */
 }
 
 .content {
@@ -38,19 +25,20 @@ html, body {
   padding: 20px;
 }
 
-html, body{
-    margin: 0;
+html,
+body {
+  margin: 0;
   padding: 0;
   height: 100%;
-    background-color:  #34495e;
-  }
+  background-color: #34495e;
+}
 
 
-  
-  .message {
-    text-align: center;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+
+.message {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

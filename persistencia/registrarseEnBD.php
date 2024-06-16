@@ -12,6 +12,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $correo = $_POST["correo"];
     $contrasenia = md5($_POST["contrasenia"]);
 
+    $existenUsuarios = "SELECT * FROM Usuario";
+    $resultado = $conexion->query($existenUsuarios);
+
+    if($resultado->num_rows > 0){
+        
+    } else {
+        $contraseniaAdmin = md5('penca2024');
+        $consultaCrearUsuario = "INSERT INTO Usuario Values (000, 'admin', 'admin', 'penca2024@tallerphp.uy', '$contraseniaAdmin')";
+        $crearUsuario = $conexion->query($consultaCrearUsuario);
+    }
+    
+
     $existeUsuario = "SELECT * FROM Usuario WHERE ci = '$ci' OR email = '$correo'";
     $resultado_verificar = $conexion->query($existeUsuario);
 

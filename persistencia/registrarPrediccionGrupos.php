@@ -56,15 +56,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     //LLENAR LA TABLA PREDICCION_PARTIDOS
-    $consulta = "INSERT INTO Prediccion_Partidos (idPrediccion, partido_id, prediccion_goles_Equipo1, prediccion_goles_Equipo2) VALUES
-    ($idPrediccion, 1, $resultado_argentina_a, $resultado_peru_a), 
-    ($idPrediccion, 2, $resultado_chile_a, $resultado_canada_a),
-    ($idPrediccion, 3, $resultado_mexico_b, $resultado_colombia_b),
-    ($idPrediccion, 4, $resultado_venezuela_b, $resultado_jamaica_b),
-    ($idPrediccion, 5, $resultado_estados_unidos_c, $resultado_uruguay_c),
-    ($idPrediccion, 6, $resultado_republica_dominicana_c, $resultado_bolivia_c),
-    ($idPrediccion, 7, $resultado_brasil_d, $resultado_ecuador_d),
-    ($idPrediccion, 8, $resultado_paraguay_d, $resultado_honduras_d)";
+    $consulta = "INSERT INTO Prediccion_Partidos (idPrediccion, partido_id, prediccion_goles_Equipo1, prediccion_goles_Equipo2, puntosPartido) VALUES
+    ($idPrediccion, 1, $resultado_argentina_a, $resultado_peru_a, 0), 
+    ($idPrediccion, 2, $resultado_chile_a, $resultado_canada_a, 0),
+    ($idPrediccion, 3, $resultado_mexico_b, $resultado_colombia_b, 0),
+    ($idPrediccion, 4, $resultado_venezuela_b, $resultado_jamaica_b, 0),
+    ($idPrediccion, 5, $resultado_estados_unidos_c, $resultado_uruguay_c, 0),
+    ($idPrediccion, 6, $resultado_republica_dominicana_c, $resultado_bolivia_c, 0),
+    ($idPrediccion, 7, $resultado_brasil_d, $resultado_ecuador_d, 0),
+    ($idPrediccion, 8, $resultado_paraguay_d, $resultado_honduras_d, 0)";
     //GRUPO A: ARGENTINA VS PERU
     //GRUPO A: CHILE VS CANADA
     //GRUPO B: MEXICO VS COLOMBIA
