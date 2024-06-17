@@ -25,10 +25,51 @@ $resultado = $conexion->query($consulta);
     <title>Ranking Pencas Generales</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="../principales/estilos.css" rel="stylesheet">
+    <style>
+    .form-container {
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow-x: auto; /* Permitir desplazamiento horizontal si la tabla es más ancha */
+    }
+
+    .table {
+        width: 100%; /* Asegura que la tabla ocupe todo el ancho del contenedor */
+        max-width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody {
+        border-top: 2px solid #dee2e6;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+</style>
   </head>
 <body>
 
 <?php include '../componentes/navbarLogeado.html'; ?>
+
+<div class="container-fluid">
+<div class="form-container">
 
 <h1 style="text-align: center;">Ranking General</h1>
     <table class="table table-striped">
@@ -61,6 +102,7 @@ $resultado = $conexion->query($consulta);
         $conexion->close();
         ?>
     </table>
-
+    </div>
+</div>
 </body>
 </html>

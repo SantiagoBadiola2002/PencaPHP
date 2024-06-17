@@ -49,7 +49,7 @@ while ($filaPenca = $resultadoPencasGenerales->fetch_assoc()) {
             $puntosActuales += 3; // Ganador y Diferencia de goles correcta, 3 puntos
             $sqlActualizarPuntosDelPartido = "UPDATE Prediccion_Partidos SET puntosPartido = 3 WHERE partido_id = '$partido_id' AND idPrediccion = '$idPrediccion'";
             $conexion->query($sqlActualizarPuntosDelPartido);
-        } elseif ((($goles_equipo_1 >= $goles_equipo_2) && ($prediccion_goles_Equipo1 >= $prediccion_goles_Equipo2)) || (($goles_equipo_1 <= $goles_equipo_2) && ($resultado_goles_Equipo1 <= $resultado_goles_Equipo2))) {
+        } elseif ((($goles_equipo_1 - $goles_equipo_2) * ($prediccion_goles_Equipo1 - $prediccion_goles_Equipo2)) > 0) {
             $puntosActuales += 2; // Ganador, 2 puntos
             $sqlActualizarPuntosDelPartido = "UPDATE Prediccion_Partidos SET puntosPartido = 2 WHERE partido_id = '$partido_id' AND idPrediccion = '$idPrediccion'";
             $conexion->query($sqlActualizarPuntosDelPartido);
@@ -101,14 +101,21 @@ while ($filaPenca = $resultadoPencasGrupales->fetch_assoc()) {
         $goles_equipo_1 = $filaPartido['goles_equipo_1'];
         $goles_equipo_2 = $filaPartido['goles_equipo_2'];
 
-        // Comparar la predicción con el resultado del partido y asignar puntos
-        if ($goles_equipo_1 == $resultado_goles_Equipo1 && $goles_equipo_2 == $resultado_goles_Equipo2) {
-            $puntosActuales += 5; // Resultado exacto, 5 puntos
-            $puntosActuales += 2; // Ganador, 2 puntos
-        } elseif (($goles_equipo_1 - $goles_equipo_2) == ($resultado_goles_Equipo1 - $resultado_goles_Equipo2)) {
-            $puntosActuales += 3; // Ganador y Diferencia de goles correcta, 3 puntos
-        } elseif ((($goles_equipo_1 > $goles_equipo_2) && ($resultado_goles_Equipo1 > $resultado_goles_Equipo2)) || (($goles_equipo_1 < $goles_equipo_2) && ($resultado_goles_Equipo1 < $resultado_goles_Equipo2))) {
-            $puntosActuales += 2; // Ganador, 2 puntos
+        if ($resultadoPartido->num_rows > 0) {
+            // Comparar la predicción con el resultado del partido y asignar puntos
+           if ($goles_equipo_1 == $prediccion_goles_Equipo1 && $goles_equipo_2 == $prediccion_goles_Equipo2) {
+                $puntosActuales += 5; // Resultado exacto, 5 puntos
+                $sqlActualizarPuntosDelPartido = "UPDATE Prediccion_Partidos SET puntosPartido = 5 WHERE partido_id = '$partido_id' AND idPrediccion = '$idPrediccion'";
+                $conexion2->query($sqlActualizarPuntosDelPartido);
+            } elseif (($goles_equipo_1 - $goles_equipo_2) == ($prediccion_goles_Equipo1 - $prediccion_goles_Equipo2)) {
+                $puntosActuales += 3; // Ganador y Diferencia de goles correcta, 3 puntos
+                $sqlActualizarPuntosDelPartido = "UPDATE Prediccion_Partidos SET puntosPartido = 3 WHERE partido_id = '$partido_id' AND idPrediccion = '$idPrediccion'";
+                $conexion2->query($sqlActualizarPuntosDelPartido);
+            } elseif ((($goles_equipo_1 - $goles_equipo_2) * ($prediccion_goles_Equipo1 - $prediccion_goles_Equipo2)) > 0) {
+                $puntosActuales += 2; // Ganador, 2 puntos
+                $sqlActualizarPuntosDelPartido = "UPDATE Prediccion_Partidos SET puntosPartido = 2 WHERE partido_id = '$partido_id' AND idPrediccion = '$idPrediccion'";
+                $conexion2->query($sqlActualizarPuntosDelPartido);
+            }
         }
 
     }
