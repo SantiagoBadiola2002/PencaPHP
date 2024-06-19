@@ -5,6 +5,15 @@ if (!isset($_SESSION['ci'])) {
   header("Location: ../index.php");
   exit();
 }
+
+include '../persistencia/config.php';
+
+$conexion = new mysqli($servidor, $usuario_db, $contrasenia_db, $base_de_datos);
+
+$consulta = "SELECT * FROM Partidos";
+$resultado = $conexion->query($consulta);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,262 +94,65 @@ if (!isset($_SESSION['ci'])) {
 
 <body>
 
-  <?php include '../componentes/navbarLogeado.html'; ?>
+  <?php include '../componentes/navbarAdmin.html'; ?>
 
   <div class="form-container">
     <h1 style="text-align: center;">Fase de Grupos</h1>
     <br>
 
     <form action="../persistencia/registrarResultadosGrupos.php" method="post">
-      <div class="r18-container">
-        <div class="r18-items">
-          <div class="r18-time">
-            <div class="r18-hour">08:00</div>
-            <div class="r18-text">
-              <span>Grupo A</span>
-              <span>Argentina vs Perú</span>
-            </div>
-            <div class="form-check">
-              <input type="hidden" name="jugado1" value="0">
-              <input class="form-check-input" type="checkbox" value="1" name="jugado1" id="jugado1">
-              <label class="form-check-label" for="jugado1">
-                Partido Jugado
-              </label>
-            </div>
-          </div>
+        <div class="r18-container">
+            <?php
+            if ($resultado->num_rows > 0) {
+                while($row = $resultado->fetch_assoc()) {
+                    $partido_id = $row['id'];
+                    $grupo = $row['grupo'];
+                    $equipo_1 = $row['equipo_1'];
+                    $equipo_2 = $row['equipo_2'];
+                    $goles_equipo_1 = $row['goles_equipo_1'];
+                    $goles_equipo_2 = $row['goles_equipo_2'];
+                    $jugado = $row['jugado'];
 
-          <div class="r18-columns">
-            <div class="r18-team-l">
-              <span class="flag-icon flag-icon-ar"></span>
-              <span class="r18-name">Argentina</span>
-              <input type="number" class="form-control" id="resultado-argentina-a" name="resultado-argentina-a">
-            </div>
-            <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-peru-a" name="resultado-peru-a">
-              <span class="r18-name">Perú</span>
-              <span class="flag-icon flag-icon-pe"></span>
-            </div>
-          </div>
+                    echo "<div class='r18-items'>
+                            <div class='r18-time'>
+                                <div class='r18-hour'>08:00</div>
+                                <div class='r18-text'>
+                                    <span>Grupo $grupo</span>
+                                    <span>$equipo_1 vs $equipo_2</span>
+                                </div>
+                                <div class='form-check'>
+                                    <input type='hidden' name='jugado$partido_id' value='0'>
+                                    <input class='form-check-input' type='checkbox' value='1' name='jugado$partido_id' id='jugado$partido_id' " . ($jugado ? "checked" : "") . ">
+                                    <label class='form-check-label' for='jugado$partido_id'>
+                                        Partido Jugado
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class='r18-columns'>
+                                <div class='r18-team-l'>
+                                    <span class='r18-name'>$equipo_1</span>
+                                    <input type='number' class='form-control' id='resultado-$equipo_1-$partido_id' name='resultado-$equipo_1-$partido_id' value='$goles_equipo_1'>
+                                </div>
+                                <div class='r18-team-r'>
+                                    <input type='number' class='form-control' id='resultado-$equipo_2-$partido_id' name='resultado-$equipo_2-$partido_id' value='$goles_equipo_2'>
+                                    <span class='r18-name'>$equipo_2</span>
+                                </div>
+                            </div>
+                        </div>";
+                }
+            } else {
+                echo "No hay partidos disponibles.";
+            }
+
+            $conexion->close();
+            ?>
         </div>
-
-        <div class="r18-items">
-          <div class="r18-time">
-            <div class="r18-hour">10:00</div>
-            <div class="r18-text">
-              <span>Grupo A</span>
-              <span>Chile vs Canadá</span>
-            </div>
-            <div class="form-check">
-              <input type="hidden" name="jugado2" value="0">
-              <input class="form-check-input" type="checkbox" value="1" name="jugado2" id="jugado2">
-              <label class="form-check-label" for="jugado2">
-                Partido Jugado
-              </label>
-            </div>
-          </div>
-
-          <div class="r18-columns">
-            <div class="r18-team-l">
-              <span class="flag-icon flag-icon-cl"></span>
-              <span class="r18-name">Chile</span>
-              <input type="number" class="form-control" id="resultado-chile-a" name="resultado-chile-a">
-            </div>
-            <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-canada-a" name="resultado-canada-a">
-              <span class="r18-name">Canadá</span>
-              <span class="flag-icon flag-icon-ca"></span>
-            </div>
-          </div>
+        <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary mt-3">Enviar</button>
         </div>
-
-        <div class="r18-items">
-          <div class="r18-time">
-            <div class="r18-hour">11:30</div>
-            <div class="r18-text">
-              <span>Grupo B</span>
-              <span>México vs Colombia</span>
-            </div>
-            <div class="form-check">
-              <input type="hidden" name="jugado3" value="0">
-              <input class="form-check-input" type="checkbox" value="1" name="jugado3" id="jugado3">
-              <label class="form-check-label" for="jugado3">
-                Partido Jugado
-              </label>
-            </div>
-          </div>
-
-          <div class="r18-columns">
-            <div class="r18-team-l">
-              <span class="flag-icon flag-icon-mx"></span>
-              <span class="r18-name">México</span>
-              <input type="number" class="form-control" id="resultado-mexico-b" name="resultado-mexico-b">
-            </div>
-            <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-colombia-b" name="resultado-colombia-b">
-              <span class="r18-name">Colombia</span>
-              <span class="flag-icon flag-icon-co"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="r18-items">
-          <div class="r18-time">
-            <div class="r18-hour">13:00</div>
-            <div class="r18-text">
-              <span>Grupo B</span>
-              <span>Venezuela vs Jamaica</span>
-            </div>
-            <div class="form-check">
-              <input type="hidden" name="jugado4" value="0">
-              <input class="form-check-input" type="checkbox" value="1" name="jugado4" id="jugado4">
-              <label class="form-check-label" for="jugado4">
-                Partido Jugado
-              </label>
-            </div>
-          </div>
-
-          <div class="r18-columns">
-            <div class="r18-team-l">
-              <span class="flag-icon flag-icon-ve"></span>
-              <span class="r18-name">Venezuela</span>
-              <input type="number" class="form-control" id="resultado-venezuela-b" name="resultado-venezuela-b">
-            </div>
-            <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-jamaica-b" name="resultado-jamaica-b">
-              <span class="r18-name">Jamaica</span>
-              <span class="flag-icon flag-icon-jm"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="r18-items">
-          <div class="r18-time">
-            <div class="r18-hour">15:00</div>
-            <div class="r18-text">
-              <span>Grupo C</span>
-              <span>Estados Unidos vs Uruguay</span>
-            </div>
-            <div class="form-check">
-              <input type="hidden" name="jugado5" value="0">
-              <input class="form-check-input" type="checkbox" value="1" name="jugado5" id="jugado5">
-              <label class="form-check-label" for="jugado5">
-                Partido Jugado
-              </label>
-            </div>
-          </div>
-
-          <div class="r18-columns">
-            <div class="r18-team-l">
-              <span class="flag-icon flag-icon-us"></span>
-              <span class="r18-name">Estados Unidos</span>
-              <input type="number" class="form-control" id="resultado-estados-unidos-c"
-                name="resultado-estados-unidos-c">
-            </div>
-            <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-uruguay-c" name="resultado-uruguay-c">
-              <span class="r18-name">Uruguay</span>
-              <span class="flag-icon flag-icon-uy"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="r18-items">
-          <div class="r18-time">
-            <div class="r18-hour">17:00</div>
-            <div class="r18-text">
-              <span>Grupo C</span>
-              <span>República Dominicana vs Bolivia</span>
-            </div>
-            <div class="form-check">
-              <input type="hidden" name="jugado6" value="0">
-              <input class="form-check-input" type="checkbox" value="1" name="jugado6" id="jugado6">
-              <label class="form-check-label" for="jugado6">
-                Partido Jugado
-              </label>
-            </div>
-          </div>
-
-          <div class="r18-columns">
-            <div class="r18-team-l">
-              <span class="flag-icon flag-icon-do"></span>
-              <span class="r18-name">República Dominicana</span>
-              <input type="number" class="form-control" id="resultado-republica-dominicana-c"
-                name="resultado-republica-dominicana-c">
-            </div>
-            <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-bolivia-c" name="resultado-bolivia-c">
-              <span class="r18-name">Bolivia</span>
-              <span class="flag-icon flag-icon-bo"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="r18-items">
-          <div class="r18-time">
-            <div class="r18-hour">20:00</div>
-            <div class="r18-text">
-              <span>Grupo D</span>
-              <span>Brasil vs Ecuador</span>
-            </div>
-            <div class="form-check">
-              <input type="hidden" name="jugado7" value="0">
-              <input class="form-check-input" type="checkbox" value="1" name="jugado7" id="jugado7">
-              <label class="form-check-label" for="jugado7">
-                Partido Jugado
-              </label>
-            </div>
-          </div>
-
-          <div class="r18-columns">
-            <div class="r18-team-l">
-              <span class="flag-icon flag-icon-br"></span>
-              <span class="r18-name">Brasil</span>
-              <input type="number" class="form-control" id="resultado-brasil-d" name="resultado-brasil-d">
-            </div>
-            <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-ecuador-d" name="resultado-ecuador-d">
-              <span class="r18-name">Ecuador</span>
-              <span class="flag-icon flag-icon-ec"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="r18-items">
-          <div class="r18-time">
-            <div class="r18-hour">22:30</div>
-            <div class="r18-text">
-              <span>Grupo D</span>
-              <span>Paraguay vs Honduras</span>
-            </div>
-            <div class="form-check">
-              <input type="hidden" name="jugado8" value="0">
-              <input class="form-check-input" type="checkbox" value="1" name="jugado8" id="jugado8">
-              <label class="form-check-label" for="jugado8">
-                Partido Jugado
-              </label>
-            </div>
-          </div>
-
-          <div class="r18-columns">
-            <div class="r18-team-l">
-              <span class="flag-icon flag-icon-py"></span>
-              <span class="r18-name">Paraguay</span>
-              <input type="number" class="form-control" id="resultado-paraguay-d" name="resultado-paraguay-d">
-            </div>
-            <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-honduras-d" name="resultado-honduras-d">
-              <span class="r18-name">Honduras</span>
-              <span class="flag-icon flag-icon-hn"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="text-align: center;">
-        <button type="submit" class="btn btn-primary mt-3">Enviar</button>
-      </div>
     </form>
-  </div>
-  </div>
+</div>
 
 </body>
 

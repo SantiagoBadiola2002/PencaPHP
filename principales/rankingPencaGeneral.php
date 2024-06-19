@@ -9,6 +9,8 @@ if (!isset($_SESSION['ci'])) {
 
 include '../persistencia/config.php';
 
+$ci = $_SESSION['ci'];
+
 $conexion = new mysqli($servidor, $usuario_db, $contrasenia_db, $base_de_datos);
 
 $consulta = "SELECT * FROM Penca_General ORDER BY puntosActuales DESC";
@@ -66,7 +68,13 @@ $resultado = $conexion->query($consulta);
   </head>
 <body>
 
-<?php include '../componentes/navbarLogeado.html'; ?>
+<?php 
+if ($ci == 0) {
+    include '../componentes/navbarAdmin.html';
+} else {
+    include '../componentes/navbarLogeado.html';
+}
+?>
 
 <div class="container-fluid">
 <div class="form-container">
