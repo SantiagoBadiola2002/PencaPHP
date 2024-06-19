@@ -15,7 +15,9 @@ CREATE TABLE Partidos (
     equipo_2 VARCHAR(30) NOT NULL,
     goles_equipo_1 INT,
     goles_equipo_2 INT,
-    jugado TINYINT(1) NOT NULL DEFAULT 0
+    jugado TINYINT(1) NOT NULL DEFAULT 0,
+    bandera_Equipo1 VARCHAR(10),
+    bandera_Equipo2 VARCHAR(10)
 );
 
 -- Tabla Predicciones
@@ -65,15 +67,16 @@ CREATE TABLE Penca_Grupal (
 );
 
 
--- Insertar datos de ejemplo en la tabla Partidos
-INSERT INTO Partidos (grupo, equipo_1, equipo_2)
+-- Insertar datos de ejemplo en la tabla Partidos con códigos de bandera
+INSERT INTO Partidos (grupo, equipo_1, equipo_2, bandera_Equipo1, bandera_Equipo2)
 VALUES
-('A', 'Argentina', 'Peru'),
-('A', 'Chile', 'Canada'),
-('B', 'Mexico', 'Colombia'),
-('B', 'Venezuela', 'Jamaica'),
-('C', 'Estados Unidos', 'Uruguay'),
-('C', 'Republica Dominicana', 'Bolivia'),
-('D', 'Brasil', 'Ecuador'),
-('D', 'Paraguay', 'Honduras');
+('A', 'Argentina', 'Peru', 'ar', 'pe'),
+('A', 'Chile', 'Canada', 'cl', 'ca'),
+('B', 'Mexico', 'Colombia', 'mx', 'co'),
+('B', 'Venezuela', 'Jamaica', 've', 'jm'),
+('C', 'EstadosUnidos', 'Uruguay', 'us', 'uy'),
+('C', 'RepublicaDominicana', 'Bolivia', 'do', 'bo'),
+('D', 'Brasil', 'Ecuador', 'br', 'ec'),
+('D', 'Paraguay', 'Honduras', 'py', 'hn');
+
 

@@ -112,7 +112,8 @@ $resultado = $conexion->query($consulta);
                     $goles_equipo_1 = $row['goles_equipo_1'];
                     $goles_equipo_2 = $row['goles_equipo_2'];
                     $jugado = $row['jugado'];
-
+                    $bandera_Equipo1 = $row['bandera_Equipo1'];
+                    $bandera_Equipo2 = $row['bandera_Equipo2'];
                     echo "<div class='r18-items'>
                             <div class='r18-time'>
                                 <div class='r18-hour'>08:00</div>
@@ -131,12 +132,14 @@ $resultado = $conexion->query($consulta);
 
                             <div class='r18-columns'>
                                 <div class='r18-team-l'>
+                                    <span class='flag-icon flag-icon-$bandera_Equipo1'></span>
                                     <span class='r18-name'>$equipo_1</span>
                                     <input type='number' class='form-control' id='resultado-$equipo_1-$partido_id' name='resultado-$equipo_1-$partido_id' value='$goles_equipo_1'>
                                 </div>
                                 <div class='r18-team-r'>
                                     <input type='number' class='form-control' id='resultado-$equipo_2-$partido_id' name='resultado-$equipo_2-$partido_id' value='$goles_equipo_2'>
                                     <span class='r18-name'>$equipo_2</span>
+                                    <span class='flag-icon flag-icon-$bandera_Equipo2'></span>
                                 </div>
                             </div>
                         </div>";
