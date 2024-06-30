@@ -70,13 +70,28 @@ CREATE TABLE Penca_Grupal (
 -- Insertar datos de ejemplo en la tabla Partidos con códigos de bandera
 INSERT INTO Partidos (grupo, equipo_1, equipo_2, bandera_Equipo1, bandera_Equipo2)
 VALUES
+-- Primera ronda
+('A', 'Argentina', 'Chile', 'ar', 'cl'),
+('A', 'Peru', 'Canada', 'pe', 'ca'),
+('B', 'Ecuador', 'Jamaica', 'ec', 'jm'),
+('B', 'Mexico', 'Venezuela', 'mx', 've'),
+('C', 'Uruguay', 'Bolivia', 'uy', 'bo'),
+('C', 'EstadosUnidos', 'Panama', 'us', 'pa'),
+('D', 'Colombia', 'CostaRica', 'co', 'cr'),
+('D', 'Brasil', 'Paraguay', 'br', 'py'),
+('A', 'Argentina', 'Canada', 'ar', 'ca'),
+('A', 'Peru', 'Chile', 'pe', 'cl'),
+('B', 'Ecuador', 'Venezuela', 'ec', 've'),
+('B', 'Mexico', 'Jamaica', 'mx', 'jm'),
+('C', 'Uruguay', 'Panama', 'uy', 'pa'),
+('C', 'EstadosUnidos', 'Bolivia', 'us', 'bo'),
+('D', 'Colombia', 'Paraguay', 'co', 'py'),
+('D', 'Brasil', 'CostaRica', 'br', 'cr'),
 ('A', 'Argentina', 'Peru', 'ar', 'pe'),
 ('A', 'Chile', 'Canada', 'cl', 'ca'),
-('B', 'Mexico', 'Colombia', 'mx', 'co'),
-('B', 'Venezuela', 'Jamaica', 've', 'jm'),
+('B', 'Jamaica', 'Venezuela', 'jm', 've'),
+('B', 'Mexico', 'Ecuador', 'mx', 'ec'),
+('C', 'Panama', 'Bolivia', 'pa', 'bo'),
 ('C', 'EstadosUnidos', 'Uruguay', 'us', 'uy'),
-('C', 'RepublicaDominicana', 'Bolivia', 'do', 'bo'),
-('D', 'Brasil', 'Ecuador', 'br', 'ec'),
-('D', 'Paraguay', 'Honduras', 'py', 'hn');
-
-
+('D', 'CostaRica', 'Paraguay', 'cr', 'py'),
+('D', 'Brasil', 'Colombia', 'br', 'co');

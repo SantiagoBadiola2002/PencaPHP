@@ -86,7 +86,379 @@ if (!isset($_SESSION['ci'])) {
       <div class="r18-container">
         <div class="r18-items">
           <div class="r18-time">
-            <div class="r18-hour">11:00</div>
+            <div class="r18-hour">20 de junio 21:00 </div>
+            <div class="r18-text">
+              <span>Grupo A</span>
+              <span>Argentina vs Canadá</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-ar"></span>
+              <span class="r18-name">Argentina</span>
+              <input type="number" class="form-control" id="resultado-argentina-a-1" name="resultado-argentina-a-1" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-canada-a-1" name="resultado-canada-a-1" min="0" required>
+              <span class="r18-name">Canadá</span>
+              <span class="flag-icon flag-icon-ca"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">21 de junio 21:00</div>
+            <div class="r18-text">
+              <span>Grupo A</span>
+              <span>Perú vs Chile</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-pe"></span>
+              <span class="r18-name">Perú</span>
+              <input type="number" class="form-control" id="resultado-peru-a-1" name="resultado-peru-a-1" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-chile-a-1" name="resultado-chile-a-1" min="0" required>
+              <span class="r18-name">Chile</span>
+              <span class="flag-icon flag-icon-cl"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">22 de junio 19:00</div>
+            <div class="r18-text">
+              <span>Grupo B</span>
+              <span>Ecuador vs Venezuela</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-ec"></span>
+              <span class="r18-name">Ecuador</span>
+              <input type="number" class="form-control" id="resultado-ecuador-b-1" name="resultado-ecuador-b-1" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-venezuela-b-1" name="resultado-venezuela-b-1" min="0" required>
+              <span class="r18-name">Venezuela</span>
+              <span class="flag-icon flag-icon-ve"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">22 de junio 22:00</div>
+            <div class="r18-text">
+              <span>Grupo B</span>
+              <span>México vs Jamaica</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-mx"></span>
+              <span class="r18-name">México</span>
+              <input type="number" class="form-control" id="resultado-mexico-b-1" name="resultado-mexico-b-1" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-jamaica-b-1" name="resultado-jamaica-b-1" min="0" required>
+              <span class="r18-name">Jamaica</span>
+              <span class="flag-icon flag-icon-jm"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">23 de junio 19:00</div>
+            <div class="r18-text">
+              <span>Grupo C</span>
+              <span>Estados Unidos vs Bolivia</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-us"></span>
+              <span class="r18-name">Estados Unidos</span>
+              <input type="number" class="form-control" id="resultado-estados-unidos-c-1" name="resultado-estados-unidos-c-1" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-bolivia-c-1" name="resultado-bolivia-c-1" min="0" required>
+              <span class="r18-name">Bolivia</span>
+              <span class="flag-icon flag-icon-bo"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">23 de junio 22:00</div>
+            <div class="r18-text">
+              <span>Grupo C</span>
+              <span>Uruguay vs Panamá</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-uy"></span>
+              <span class="r18-name">Uruguay</span>
+              <input type="number" class="form-control" id="resultado-uruguay-c-1" name="resultado-uruguay-c-1" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-panama-c-1" name="resultado-panama-c-1" min="0" required>
+              <span class="r18-name">Panamá</span>
+              <span class="flag-icon flag-icon-pa"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">24 de junio 19:00</div>
+            <div class="r18-text">
+              <span>Grupo D</span>
+              <span>Colombia vs Paraguay</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-co"></span>
+              <span class="r18-name">Colombia</span>
+              <input type="number" class="form-control" id="resultado-colombia-d-1" name="resultado-colombia-d-1" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-paraguay-d-1" name="resultado-paraguay-d-1" min="0" required>
+              <span class="r18-name">Paraguay</span>
+              <span class="flag-icon flag-icon-py"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">24 de junio 22:00</div>
+            <div class="r18-text">
+              <span>Grupo D</span>
+              <span>Brasil vs Costa Rica</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-br"></span>
+              <span class="r18-name">Brasil</span>
+              <input type="number" class="form-control" id="resultado-brasil-d-1" name="resultado-brasil-d-1" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-costa-rica-d-1" name="resultado-costa-rica-d-1" min="0" required>
+              <span class="r18-name">Costa Rica</span>
+              <span class="flag-icon flag-icon-cr"></span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="r18-container">
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">25 de junio 19:00 </div>
+            <div class="r18-text">
+              <span>Grupo A</span>
+              <span>Argentina vs Chile</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-ar"></span>
+              <span class="r18-name">Argentina</span>
+              <input type="number" class="form-control" id="resultado-argentina-a-2" name="resultado-argentina-a-2" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-chile-a-2" name="resultado-chile-a-2" min="0" required>
+              <span class="r18-name">Chile</span>
+              <span class="flag-icon flag-icon-cl"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">25 de junio 19:00</div>
+            <div class="r18-text">
+              <span>Grupo A</span>
+              <span>Perú vs Canadá</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-pe"></span>
+              <span class="r18-name">Perú</span>
+              <input type="number" class="form-control" id="resultado-peru-a-2" name="resultado-peru-a-2" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-canada-a-2" name="resultado-canada-a-2" min="0" required>
+              <span class="r18-name">Canadá</span>
+              <span class="flag-icon flag-icon-ca"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">26 de junio 19:00</div>
+            <div class="r18-text">
+              <span>Grupo B</span>
+              <span>Ecuador vs Jamaica</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-ec"></span>
+              <span class="r18-name">Ecuador</span>
+              <input type="number" class="form-control" id="resultado-ecuador-b-2" name="resultado-ecuador-b-2" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-jamaica-b-2" name="resultado-jamaica-b-2" min="0" required>
+              <span class="r18-name">Jamaica</span>
+              <span class="flag-icon flag-icon-jm"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">26 de junio 22:00</div>
+            <div class="r18-text">
+              <span>Grupo B</span>
+              <span>México vs Venezuela</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-mx"></span>
+              <span class="r18-name">México</span>
+              <input type="number" class="form-control" id="resultado-mexico-b-2" name="resultado-mexico-b-2" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-venezuela-b-2" name="resultado-venezuela-b-2" min="0" required>
+              <span class="r18-name">Venezuela</span>
+              <span class="flag-icon flag-icon-ve"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">27 de junio 22:00</div>
+            <div class="r18-text">
+              <span>Grupo C</span>
+              <span>Uruguay vs Bolivia</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-uy"></span>
+              <span class="r18-name">Uruguay</span>
+              <input type="number" class="form-control" id="resultado-uruguay-c-2" name="resultado-uruguay-c-2" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-bolivia-c-2" name="resultado-bolivia-c-2" min="0" required>
+              <span class="r18-name">Bolivia</span>
+              <span class="flag-icon flag-icon-bo"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">27 de junio 19:00</div>
+            <div class="r18-text">
+              <span>Grupo C</span>
+              <span>Estados Unidos vs Panamá</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-us"></span>
+              <span class="r18-name">Estados Unidos</span>
+              <input type="number" class="form-control" id="resultado-estados-unidos-c-2" name="resultado-estados-unidos-c-2" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-panama-c-2" name="resultado-panama-c-2" min="0" required>
+              <span class="r18-name">Panamá</span>
+              <span class="flag-icon flag-icon-pa"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">28 de junio 19:00</div>
+            <div class="r18-text">
+              <span>Grupo D</span>
+              <span>Colombia vs Costa Rica</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-co"></span>
+              <span class="r18-name">Colombia</span>
+              <input type="number" class="form-control" id="resultado-colombia-d-2" name="resultado-colombia-d-2" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-costa-rica-d-2" name="resultado-costa-rica-d-2" min="0" required>
+              <span class="r18-name">Costa Rica</span>
+              <span class="flag-icon flag-icon-cr"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">28 de junio 22:00</div>
+            <div class="r18-text">
+              <span>Grupo D</span>
+              <span>Brasil vs Paraguay</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-br"></span>
+              <span class="r18-name">Brasil</span>
+              <input type="number" class="form-control" id="resultado-brasil-d-2" name="resultado-brasil-d-2" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-paraguay-d-2" name="resultado-paraguay-d-2" min="0" required>
+              <span class="r18-name">Paraguay</span>
+              <span class="flag-icon flag-icon-py"></span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="r18-container">
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">29 de junio 21:00 </div>
             <div class="r18-text">
               <span>Grupo A</span>
               <span>Argentina vs Perú</span>
@@ -97,10 +469,10 @@ if (!isset($_SESSION['ci'])) {
             <div class="r18-team-l">
               <span class="flag-icon flag-icon-ar"></span>
               <span class="r18-name">Argentina</span>
-              <input type="number" class="form-control" id="resultado-argentina-a" name="resultado-argentina-a" min="0" required>
+              <input type="number" class="form-control" id="resultado-argentina-a-3" name="resultado-argentina-a-3" min="0" required>
             </div>
             <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-peru-a" name="resultado-peru-a" min="0" required>
+              <input type="number" class="form-control" id="resultado-peru-a-3" name="resultado-peru-a-3" min="0" required>
               <span class="r18-name">Perú</span>
               <span class="flag-icon flag-icon-pe"></span>
             </div>
@@ -109,7 +481,7 @@ if (!isset($_SESSION['ci'])) {
 
         <div class="r18-items">
           <div class="r18-time">
-            <div class="r18-hour">11:00</div>
+            <div class="r18-hour">29 de junio 21:00</div>
             <div class="r18-text">
               <span>Grupo A</span>
               <span>Chile vs Canadá</span>
@@ -120,10 +492,10 @@ if (!isset($_SESSION['ci'])) {
             <div class="r18-team-l">
               <span class="flag-icon flag-icon-cl"></span>
               <span class="r18-name">Chile</span>
-              <input type="number" class="form-control" id="resultado-chile-a" name="resultado-chile-a" min="0" required>
+              <input type="number" class="form-control" id="resultado-chile-a-3" name="resultado-chile-a-3" min="0" required>
             </div>
             <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-canada-a" name="resultado-canada-a" min="0" required>
+              <input type="number" class="form-control" id="resultado-canada-a-3" name="resultado-canada-a-3" min="0" required>
               <span class="r18-name">Canadá</span>
               <span class="flag-icon flag-icon-ca"></span>
             </div>
@@ -132,10 +504,33 @@ if (!isset($_SESSION['ci'])) {
 
         <div class="r18-items">
           <div class="r18-time">
-            <div class="r18-hour">11:00</div>
+            <div class="r18-hour">30 de junio 21:00</div>
             <div class="r18-text">
               <span>Grupo B</span>
-              <span>México vs Colombia</span>
+              <span>Jamaica vs Venezuela</span>
+            </div>
+          </div>
+
+          <div class="r18-columns">
+            <div class="r18-team-l">
+              <span class="flag-icon flag-icon-jm"></span>
+              <span class="r18-name">Jamaica</span>
+              <input type="number" class="form-control" id="resultado-jamaica-b-3" name="resultado-jamaica-b-3" min="0" required>
+            </div>
+            <div class="r18-team-r">
+              <input type="number" class="form-control" id="resultado-venezuela-b-3" name="resultado-venezuela-b-3" min="0" required>
+              <span class="r18-name">Venezuela</span>
+              <span class="flag-icon flag-icon-ve"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="r18-items">
+          <div class="r18-time">
+            <div class="r18-hour">30 de junio 21:00</div>
+            <div class="r18-text">
+              <span>Grupo B</span>
+              <span>México vs Ecuador</span>
             </div>
           </div>
 
@@ -143,42 +538,42 @@ if (!isset($_SESSION['ci'])) {
             <div class="r18-team-l">
               <span class="flag-icon flag-icon-mx"></span>
               <span class="r18-name">México</span>
-              <input type="number" class="form-control" id="resultado-mexico-b" name="resultado-mexico-b" min="0" required>
+              <input type="number" class="form-control" id="resultado-mexico-b-3" name="resultado-mexico-b-3" min="0" required>
             </div>
             <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-colombia-b" name="resultado-colombia-b" min="0" required>
-              <span class="r18-name">Colombia</span>
-              <span class="flag-icon flag-icon-co"></span>
+              <input type="number" class="form-control" id="resultado-ecuador-b-3" name="resultado-ecuador-b-3" min="0" required>
+              <span class="r18-name">Ecuador</span>
+              <span class="flag-icon flag-icon-ec"></span>
             </div>
           </div>
         </div>
 
         <div class="r18-items">
           <div class="r18-time">
-            <div class="r18-hour">11:00</div>
+            <div class="r18-hour">1 de julio 22:00</div>
             <div class="r18-text">
-              <span>Grupo B</span>
-              <span>Venezuela vs Jamaica</span>
+              <span>Grupo C</span>
+              <span>Panamá vs Bolivia</span>
             </div>
           </div>
 
           <div class="r18-columns">
             <div class="r18-team-l">
-              <span class="flag-icon flag-icon-ve"></span>
-              <span class="r18-name">Venezuela</span>
-              <input type="number" class="form-control" id="resultado-venezuela-b" name="resultado-venezuela-b" min="0" required>
+              <span class="flag-icon flag-icon-pm"></span>
+              <span class="r18-name">Panamá</span>
+              <input type="number" class="form-control" id="resultado-panama-c-3" name="resultado-panama-c-3" min="0" required>
             </div>
             <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-jamaica-b" name="resultado-jamaica-b" min="0" required>
-              <span class="r18-name">Jamaica</span>
-              <span class="flag-icon flag-icon-jm"></span>
+              <input type="number" class="form-control" id="resultado-bolivia-c-3" name="resultado-bolivia-c-3" min="0" required>
+              <span class="r18-name">Bolivia</span>
+              <span class="flag-icon flag-icon-bo"></span>
             </div>
           </div>
         </div>
 
         <div class="r18-items">
           <div class="r18-time">
-            <div class="r18-hour">11:00</div>
+            <div class="r18-hour">1 de julio 22:00</div>
             <div class="r18-text">
               <span>Grupo C</span>
               <span>Estados Unidos vs Uruguay</span>
@@ -189,10 +584,10 @@ if (!isset($_SESSION['ci'])) {
             <div class="r18-team-l">
               <span class="flag-icon flag-icon-us"></span>
               <span class="r18-name">Estados Unidos</span>
-              <input type="number" class="form-control" id="resultado-estados-unidos-c" name="resultado-estados-unidos-c" min="0" required>
+              <input type="number" class="form-control" id="resultado-estados-unidos-c-3" name="resultado-estados-unidos-c-3" min="0" required>
             </div>
             <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-uruguay-c" name="resultado-uruguay-c" min="0" required>
+              <input type="number" class="form-control" id="resultado-uruguay-c-3" name="resultado-uruguay-c-3" min="0" required>
               <span class="r18-name">Uruguay</span>
               <span class="flag-icon flag-icon-uy"></span>
             </div>
@@ -201,33 +596,33 @@ if (!isset($_SESSION['ci'])) {
 
         <div class="r18-items">
           <div class="r18-time">
-            <div class="r18-hour">11:00</div>
+            <div class="r18-hour">2 de julio 22:00</div>
             <div class="r18-text">
-              <span>Grupo C</span>
-              <span>República Dominicana vs Bolivia</span>
+              <span>Grupo D</span>
+              <span>Costa Rica vs Paraguay</span>
             </div>
           </div>
 
           <div class="r18-columns">
             <div class="r18-team-l">
-              <span class="flag-icon flag-icon-do"></span>
-              <span class="r18-name">República Dominicana</span>
-              <input type="number" class="form-control" id="resultado-republica-dominicana-c" name="resultado-republica-dominicana-c" min="0" required>
+              <span class="flag-icon flag-icon-cr"></span>
+              <span class="r18-name">Costa Rica</span>
+              <input type="number" class="form-control" id="resultado-costa-rica-d-3" name="resultado-costa-rica-d-3" min="0" required>
             </div>
             <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-bolivia-c" name="resultado-bolivia-c" min="0" required>
-              <span class="r18-name">Bolivia</span>
-              <span class="flag-icon flag-icon-bo"></span>
+              <input type="number" class="form-control" id="resultado-paraguay-d-3" name="resultado-paraguay-d-3" min="0" required>
+              <span class="r18-name">Paraguay</span>
+              <span class="flag-icon flag-icon-py"></span>
             </div>
           </div>
         </div>
 
         <div class="r18-items">
           <div class="r18-time">
-            <div class="r18-hour">11:00</div>
+            <div class="r18-hour">2 de julio 22:00</div>
             <div class="r18-text">
               <span>Grupo D</span>
-              <span>Brasil vs Ecuador</span>
+              <span>Brasil vs Colombia</span>
             </div>
           </div>
 
@@ -235,38 +630,18 @@ if (!isset($_SESSION['ci'])) {
             <div class="r18-team-l">
               <span class="flag-icon flag-icon-br"></span>
               <span class="r18-name">Brasil</span>
-              <input type="number" class="form-control" id="resultado-brasil-d" name="resultado-brasil-d" min="0" required>
+              <input type="number" class="form-control" id="resultado-brasil-d-3" name="resultado-brasil-d-3" min="0" required>
             </div>
             <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-ecuador-d" name="resultado-ecuador-d" min="0" required>
-              <span class="r18-name">Ecuador</span>
-              <span class="flag-icon flag-icon-ec"></span>
+              <input type="number" class="form-control" id="resultado-colombia-d-3" name="resultado-colombia-d-3" min="0" required>
+              <span class="r18-name">Colombia</span>
+              <span class="flag-icon flag-icon-co"></span>
             </div>
           </div>
         </div>
 
-        <div class="r18-items">
-          <div class="r18-time">
-            <div class="r18-hour">11:00</div>
-            <div class="r18-text">
-              <span>Grupo D</span>
-              <span>Paraguay vs Honduras</span>
-            </div>
-          </div>
 
-          <div class="r18-columns">
-            <div class="r18-team-l">
-              <span class="flag-icon flag-icon-py"></span>
-              <span class="r18-name">Paraguay</span>
-              <input type="number" class="form-control" id="resultado-paraguay-d" name="resultado-paraguay-d" min="0" required>
-            </div>
-            <div class="r18-team-r">
-              <input type="number" class="form-control" id="resultado-honduras-d" name="resultado-honduras-d" min="0" required>
-              <span class="r18-name">Honduras</span>
-              <span class="flag-icon flag-icon-hn"></span>
-            </div>
-          </div>
-        </div>
+
       </div>
       <div style="text-align: center;">
       <button type="submit" class="btn btn-primary mt-3">Enviar</button>

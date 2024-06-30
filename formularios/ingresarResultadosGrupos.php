@@ -116,7 +116,7 @@ $resultado = $conexion->query($consulta);
                     $bandera_Equipo2 = $row['bandera_Equipo2'];
                     echo "<div class='r18-items'>
                             <div class='r18-time'>
-                                <div class='r18-hour'>08:00</div>
+                                <div class='r18-hour'>$partido_id</div>
                                 <div class='r18-text'>
                                     <span>Grupo $grupo</span>
                                     <span>$equipo_1 vs $equipo_2</span>
